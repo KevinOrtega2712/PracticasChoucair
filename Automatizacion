@@ -1,0 +1,44 @@
+package com.automatizar.practica;
+
+import static org.junit.Assert.assertEquals;
+
+import java.util.concurrent.TimeUnit;
+
+import org.junit.After;
+import org.junit.Before;
+import org.junit.Test;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class ClickYoutube {
+	
+	private WebDriver driver;
+	
+	
+	@Before
+	public void SetUp() {
+		System.setProperty("webdriver.chrome.driver", "./src/test/resources/chromedriver2/chromedriver.exe");
+		driver = new ChromeDriver();
+		driver.manage().window().maximize();
+		driver.get("https://www.choucairtesting.com/empleos-testing/");
+	}
+	
+	@Test
+	public void choucair() {
+		
+		By locator_link = By.linkText("¿Qué es ser Choucair?");
+		
+		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+		
+		By locator_link2 = By.linkText("Prepararse para aplicar");
+		
+		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+		
+		By locator_id = By.id("55b4ed7");
+		
+	}
+	
+	
+}a
